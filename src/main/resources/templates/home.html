@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{base::layout(~{::section})}">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<section class="banner d-flex justify-content-center align-item-center">
+    <div class="text-center mt-5">
+        <h1 class="font-weight-bold mb-4 text-primary">CONTACT COVE: Your Smart Contact Companion</h1>
+        <p class="lead mb-1 text-muted">Welcome to Contact Cove, where managing your contacts becomes a breeze!</p>
+        <p class="lead mb-1 text-muted">Say goodbye to scattered contacts and hello to seamless organization.</p>
+        <p class="lead mb-1 text-muted">With Contact Cove, you can effortlessly gather, connect, and engage with your network in the smartest way possible.</p>
+        <a th:href="@{/signin}" class="btn btn-primary btn-lg mt-3"
+           onmouseover="this.style.backgroundColor='#007bff'; this.style.borderColor='#007bff';"
+           onmouseout="this.style.backgroundColor=''; this.style.borderColor='';">
+            Get Started
+        </a>
+    </div>
+</section>
+</body>
+</html>

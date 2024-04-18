@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{normal/base::layout(~{::section})}">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<section>
+  <div class="card mr-20">
+      <i onclick="toggleSidebar()" class="fas fa-bars m-3 top-right"></i>
+      <div class="card-body" style="background:#a5c9af">
+      <h1 class="text-center">Add Contact</h1>
+        <div class="container-fluid mt-1">
+        <div class="row">
+          <div class="col-md-8 offset-md-2">
+              <form action="#" th:action="@{/user/process-contact}" th:object="${contact}" enctype="multipart/form-data" method="post" class="mt-2">
+                    <div class="mb-3">
+                  <label for="firstName" class="form-label">First Name</label>
+                    <input required type="text" class="form-control" id="firstName" name="name" placeholder="Enter first name">
+          </div>
+          <div class="mb-3">
+            <label for="LastName" class="form-label">Second Name</label>
+            <input required type="text" class="form-control" name="secondName" id="LastName" placeholder="Enter last name">
+          </div>
+                  <div class="mb-3">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input required type="number" class="form-control" name="phone" id="phone" placeholder="Enter Phone">
+                  </div>
+                  <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input required type="email" class="form-control" name="email" id="email" placeholder="Enter second name">
+                  </div>
+                  <div class="mb-3">
+                    <label for="work" class="form-label">Work</label>
+                    <input required type="text" class="form-control" name="work" id="work" placeholder="Enter your work">
+                  </div>
+                  <div class="mb-3">
+                      <textarea type="text" class="form-control" name="description" id="mytextarea" placeholder="Enter description"></textarea>
+                  </div>
+                    <div class="custom-file">
+                        <input type="file" name="image"/>
+                    </div>
+          <button type="submit" class="btn btn-primary mt-2">Add</button>
+                </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+</body>
+</html>
